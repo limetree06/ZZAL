@@ -1,22 +1,22 @@
-let textarea = document.getElementById('test-target'),
-consoleLog = document.getElementById('console-log'),
-btnReset = document.getElementById('btn-reset');
+function search() {
+  keyword = document.getElementById("search").value;
 
-function logMessage(message) {
-  consoleLog.innerHTML += message + "<br>";
+  fetch("http://192.249.18.145:443/search", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      keyword: keyword,
+    }),
+  })
+    .then((res) => {
+      if (res.status === 400) {
+        alert("fail");
+      } else if (res.status === 200) {
+        alert("success");
+      }
+    })
+    .catch((error) => console.log("error", error));
 }
-window.onkeydown = (e) => console.log(e);
-
-window.addEventListener("keydown", (e) => {
-    const key = document.getElementById(e.key);
-    if (key) key.classList.add("pressed");
-  });
-
-btnReset.addEventListener('click', (e) => {
-  let child = consoleLog.firstChild;
-  while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
-  }
-  textarea.value = ''
-});
