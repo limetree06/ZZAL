@@ -1,11 +1,9 @@
-function signin() {
+function signup() {
   username = document.getElementById("username").value;
-  password = document.getElementById("pass").value;
+  password = document.getElementById("psw").value;
+  psw_repeat = document.getElementById("psw-repeat").value;
 
-  console.log(typeof username);
-  console.log(typeof password);
-
-  fetch("http://192.249.18.145:443/login", {
+  fetch("http://192.249.18.145:443/signup", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -18,10 +16,10 @@ function signin() {
   })
     .then((res) => {
       if (res.status === 400) {
-        alert("등록되지 않은 아이디나 비밀번호 입니다.");
+        alert("이미 등록되어 있는 닉네임 입니다.");
       } else if (res.status === 200) {
-        alert("로그인 성공하였습니다.");
-        window.location.href = "./index.html";
+        alert("회원가입 성공하였습니다. 로그인 하여주세요");
+        window.location.href = "./login.html";
       }
     })
     .catch((error) => console.log("error", error));
