@@ -21,6 +21,8 @@
   "homepage": "https://github.com/Seung-an-Jung/Madcamp_week4#readme",
   "description": "",
   "dependencies": {
+    "ejs": "^3.1.6",
+    "ejs-electron": "^2.1.1",
     "firebase-admin": "^9.11.0",
     "firebase-functions": "^3.14.1",
     "firebaseui": "^4.8.1",
