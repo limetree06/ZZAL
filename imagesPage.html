@@ -17,8 +17,8 @@
       <span class="slider round"></span>
     </label>
     <div>
-      <input type="text" placeholder="키워드 검색" id="search" />
-      <button type="submit" onClick="search()">검색</button>
+      <input type="text" placeholder="키워드 검색" id="search_local" />
+      <button type="submit" onClick="search_local()">검색</button>
     </div>
     <div>
       <form
@@ -60,22 +60,19 @@
     </div>
     <hr />
 
-    <h1>Uploaded Images</h1>
+    <% items.forEach(function(image) { %>
     <div>
-      <% items.forEach(function(image) { %>
       <div>
-        <div>
-          <img
-            src="data:image/<%=image.img.contentType%>;base64,
+        <img
+          src="data:image/<%=image.img.contentType%>;base64,
                      <%=image.img.data.toString('base64')%>"
-          />
-          <div>
-            <h5><%= image.name %></h5>
-            <p><%= image.desc %></p>
-          </div>
+        />
+        <div>
+          <h5><%= image.name %></h5>
+          <p><%= image.desc %></p>
         </div>
       </div>
-      <% }) %>
     </div>
+    <% }) %>
   </body>
 </html>

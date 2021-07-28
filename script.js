@@ -11,8 +11,8 @@ function refresh() {
 console.log("refresh");
 refresh();
 
-function search() {
-  search = document.getElementById("search").value;
+function search_local() {
+  search = document.getElementById("search_local").value;
   fetch("http://192.249.18.145:443/search", {
     method: "POST",
     headers: {
@@ -20,7 +20,7 @@ function search() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      search: search,
+      hashtag: search,
     }),
   });
 }
