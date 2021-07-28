@@ -3,12 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <<<<<<< HEAD =======
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style_index.css" />
+    >>>>>>> 72bc1c41cb21b1e47a5945b7f04a006001aaebb9
     <title>Image Uploading</title>
   </head>
 
   <body>
-    <h1>To Upload Image on mongoDB</h1>
+    <h1>ZZAL</h1>
     <hr />
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+    <div>
+      <input type="text" placeholder="키워드 검색" id="search_local" />
+      <button type="submit" onClick="search_local()">검색</button>
+    </div>
     <div>
       <form
         action="http://192.249.18.145:443/"
@@ -47,6 +60,7 @@
         </div>
       </form>
     </div>
+    <<<<<<< HEAD
 
     <hr />
 
@@ -67,5 +81,22 @@
       </div>
       <% }) %>
     </div>
+    =======
+    <hr />
+
+    <% items.forEach(function(image) { %>
+    <div>
+      <div>
+        <img
+          src="data:image/<%=image.img.contentType%>;base64,
+                     <%=image.img.data.toString('base64')%>"
+        />
+        <div>
+          <h5><%= image.name %></h5>
+          <p><%= image.desc %></p>
+        </div>
+      </div>
+    </div>
+    <% }) %> >>>>>>> 72bc1c41cb21b1e47a5945b7f04a006001aaebb9
   </body>
 </html>

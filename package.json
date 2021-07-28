@@ -20,7 +20,6 @@
     "url": "https://github.com/Seung-an-Jung/Madcamp_week4/issues"
   },
   "homepage": "https://github.com/Seung-an-Jung/Madcamp_week4#readme",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
@@ -33,5 +32,6 @@
     "mongoose": "^5.13.3",
     "multer": "^1.4.2",
     "yarn": "^1.22.10"
-  }
+  },
+  "description": ""
 }

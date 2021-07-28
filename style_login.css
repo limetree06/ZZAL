@@ -1,0 +1,32 @@
+.overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 7;
+  width: 98%;
+  height: 98%;
+  padding-top: 10%;
+  background: rgba(00, 255, 00, 0.5);
+  text-align: center;
+  display: none;
+  color: #efefef;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.favorite:hover {
+  cursor: pointer;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  height: 96%;
+  width: 94%;
+  z-index: 100;
+}
