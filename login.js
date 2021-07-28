@@ -21,7 +21,7 @@ function signin() {
         alert("등록되지 않은 아이디나 비밀번호 입니다.");
       } else if (res.status === 200) {
         alert("로그인 성공하였습니다.");
-        window.location.href = "./index.html";
+        location.href = "http://172.10.18.145:443";
       }
     })
     .catch((error) => console.log("error", error));
