@@ -2354,6 +2354,11 @@
   dependencies:
     "escape-goat" "^2.0.0"
 
+"python-shell@^3.0.0":
+  "integrity" "sha512-vlIkpJBwkhtG8d2rBbPEweg+3UXdkoduRZ0jLbIX3efYutBjTdmdmMrEQCQy9tkabH36yUjOhwTPFkH3BvoYZQ=="
+  "resolved" "https://registry.npmjs.org/python-shell/-/python-shell-3.0.0.tgz"
+  "version" "3.0.0"
+
 "qs@6.7.0":
   "integrity" "sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ=="
   "resolved" "https://registry.npmjs.org/qs/-/qs-6.7.0.tgz"
