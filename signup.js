@@ -16,9 +16,9 @@ function signup() {
   })
     .then((res) => {
       if (res.status === 400) {
-        alert("이미 등록되어 있는 닉네임 입니다.");
+        swal("Notice", "이미 등록되어 있는 닉네임 입니다.");
       } else if (res.status === 200) {
-        alert("회원가입 성공하였습니다. 로그인 하여주세요");
+        swal("Notice", "회원가입 성공하였습니다. 로그인 하여주세요");
         window.location.href = "./login.html";
       }
     })

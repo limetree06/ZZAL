@@ -1,4 +1,3 @@
-from pynput import *
 from pynput.keyboard import Listener
 
 def write_to_file(key):
