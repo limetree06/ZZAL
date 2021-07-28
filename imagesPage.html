@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <<<<<<< HEAD =======
     <script src="script.js"></script>
     <link rel="stylesheet" href="style_index.css" />
-    >>>>>>> 72bc1c41cb21b1e47a5945b7f04a006001aaebb9
     <title>Image Uploading</title>
   </head>
 
@@ -60,28 +58,6 @@
         </div>
       </form>
     </div>
-    <<<<<<< HEAD
-
-    <hr />
-
-    <h1>Uploaded Images</h1>
-    <div>
-      <% items.forEach(function(image) { %>
-      <div>
-        <div>
-          <img
-            src="data:image/<%=image.img.contentType%>;base64,
-                     <%=image.img.data.toString('base64')%>"
-          />
-          <div>
-            <h5><%= image.name %></h5>
-            <p><%= image.desc %></p>
-          </div>
-        </div>
-      </div>
-      <% }) %>
-    </div>
-    =======
     <hr />
 
     <% items.forEach(function(image) { %>
@@ -97,6 +73,6 @@
         </div>
       </div>
     </div>
-    <% }) %> >>>>>>> 72bc1c41cb21b1e47a5945b7f04a006001aaebb9
+    <% }) %>
   </body>
 </html>
