@@ -21,6 +21,7 @@ function signin() {
         alert("등록되지 않은 아이디나 비밀번호 입니다.");
       } else if (res.status === 200) {
         alert("로그인 성공하였습니다");
+        sessionStorage.setItem("username", username);
         window.location.href = "./imagesPage.html";
       }
     })
