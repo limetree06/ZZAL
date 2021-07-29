@@ -11,16 +11,21 @@
 
     <html>
         <img src="./resource/진짜최종.gif" width="390px" height="600px" id = "ZZAL_logo">
-        <div>
+        <div class="img_wrapper">
           <input type="text" id="username" name="username" placeholder="Username" class="loginbox">
         </div>
       
-        <div>
+        <div class="img_wrapper">
           <input type="password" id="pass" name="password" placeholder="Password" class="loginbox">
        </div>
       
-      <input type="button" onClick="signin()" value="로그인">
-      <input type="button" value="회원가입" onClick="location.href='signup.html'">
+       <div class="button">
+          <img src="resource/login.png"  onClick="signin()" width="140px" height="40px"  class="login"/>
+          <img src="resource/signup.png"  onClick="location.href='signup.html'" width="140px" height="40px" class="login"/>
+       </div>
+    
+      
+      <!-- <button class = "signup_button" onClick="location.href='signup.html'"><img src="resource/signup.png"/></button> -->
   </body>
   
 </html>

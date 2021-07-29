@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <script src="signup.js"></script>
+    <link rel="stylesheet" href="style_signup.css" />
+
     <title>Sign up Page</title>
   </head>
   <body>
@@ -12,27 +14,23 @@
 
         <form>
             <div class="container">
-            <div>
-              <label for="username"><b>Username</b></label>
-              <input type="text" placeholder="Enter username" name="username" id="username" required>
-            </div>
-              <div>
-          
-              <label for="psw"><b>비밀번호</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-            </div>
-            <div>
-          
-              <label for="psw-repeat"><b>비밀번호 확인</b></label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-            </div>
-            <div>
-        
-              <input type="button" onClick="signup()" value="회원가입">
-              <input type="button" value="취소" onClick="location.href='login.html'">
-
+              <div class="img_wrapper">
+                <input type="text" id="username" name="username" placeholder="Enter username" class="signupbox">
               </div>
+            
+              <div class="img_wrapper">
+                <input type="password" id="pass" name="password" placeholder="Enter Password"  class="signupbox">
+             </div>
+             <div class="img_wrapper">
+              <input type="password" id="pass" name="psw-repeat" id="psw-repeat" placeholder="Repeat Password"  class="signupbox">
+           </div>
+          </div>
+
+
+          <div class="button">
+            <img src="resource/login.png"  onClick="signup()" width="140px" height="40px"  class="login"/>
+            <img src="resource/signup.png"  onClick="location.href='login.html'" width="140px" height="40px" class="login"/>
+         </div>
             </div>
           </form>
   </body>
