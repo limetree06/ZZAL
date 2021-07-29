@@ -1,6 +1,6 @@
 function search_local() {
   search = document.getElementById("search_local").value;
-  image = document.getElementById("getimage");
+
   document.getElementById("container").innerHTML = "";
   var index = 0;
 
@@ -28,7 +28,7 @@ function search_local() {
               json[index].img.data.toString("base64");
 
             document.getElementById("container").innerHTML +=
-              "<div class=Aligner> <img width = '340px' height = '240px' alt='Snow' src=" +
+              "<div class=Aligner> <img width = '340px' height = '240px' src=" +
               imgsrc +
               "><button class=button onclick='clickf(imgname)'><img src=./resource/love.png width = '30px' height = '24px'></button></div>";
             index++;

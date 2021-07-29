@@ -47,7 +47,7 @@ html {
 .Aligner .button {
   position: absolute;
   top: 10%;
-  left: 85%;
+  left: 90%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   padding: 3px 8px;
@@ -103,6 +103,15 @@ html {
   transform: translateY(-50%);
 }
 
+.popup {
+  padding: 0 25px 0 20px; /* Padding for other horizontal elements */
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  /*요소의 높이의 반(50%) 만큼 위로 이동*/
+  transform: translateY(-50%);
+}
+
 .flexsearch--input {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -131,7 +140,7 @@ html {
   padding: 0;
   border: none;
   margin-top: 15px; /* margin-top + border-width */
-  margin-right: 30px; /* border-width */
+  margin-right: 50px; /* border-width */
   background: transparent;
   color: #888;
   font-family: "Helvetica", sans-serif;
