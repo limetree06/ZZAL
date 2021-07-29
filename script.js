@@ -6,13 +6,23 @@ function refresh() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({}),
-  });
+  })
+    .then((res) => {
+      if (res.status === 400) {
+        console.log("fail");
+      } else if (res.status === 200) {
+        console.log("success");
+        document.getElementById("container").innerHTML = "image section";
+      }
+    })
+    .catch((error) => console.log("error", error));
 }
 console.log("refresh");
 
 function search_local() {
   search = document.getElementById("search_local").value;
   image = document.getElementById("getimage");
+  document.getElementById("container").innerHTML = "";
   var index = 0;
 
   fetch("http://192.249.18.145:443/search", {
