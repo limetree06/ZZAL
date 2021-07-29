@@ -1,11 +1,11 @@
-.loginbox {
+.signupbox {
   border: 0px solid #ccc;
   font-size: 16px;
   background-image: url("./resource/box.png");
-  background-size: 250px;
+  background-size: 240px;
   background-repeat: no-repeat;
   padding: 20px 70px 20px 70px;
-  width: 110px;
+  width: 100px;
   height: 4px;
   align-items: center;
 }
@@ -14,11 +14,8 @@
   margin-left: 60px;
 }
 
-.login_button {
-  margin-left: 20px;
-  border: 0px solid #ccc;
-  width: 10px;
-  height: 10px;
+.btn_ipt {
+  margin-left: 100px;
 }
 
 .signup_button {
@@ -26,9 +23,4 @@
   border: 0px solid #ccc;
   width: 10px;
   height: 10px;
-}
-
-.button {
-  margin-left: 45px;
-  border: 0px solid #ccc;
 }
