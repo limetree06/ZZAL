@@ -49,9 +49,9 @@ function search_local() {
               json[index].img.data.toString("base64");
 
             document.getElementById("container").innerHTML +=
-              "<div> <img width = '400px' height = '300px' src=" +
+              "<div class=Aligner> <img width = '400px' height = '300px' src=" +
               imgsrc +
-              "><button ><img src=./resource/love.png width = '40px' height = '30px'> </button></div>";
+              "><button class=button onclick='clickf(imgname)'><img src=./resource/love.png width = '40px' height = '30px'> </button></div>";
             index++;
           }
         });
