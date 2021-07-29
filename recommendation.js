@@ -393,9 +393,9 @@ fetch("http://192.249.18.145:443/recommend", {
                     ";base64," +
                     json[index].img.data.toString("base64");
                   document.getElementById("container").innerHTML +=
-                    "<div class=Aligner> <img width = '400px' height = '300px' src=" +
+                    "<div class=Aligner> <img width = '320px' height = '240px' alt='Snow' src=" +
                     imgsrc +
-                    "><button class=button onclick='clickf(imgname)'><img src=./resource/love.png width = '40px' height = '30px'> </button></div>";
+                    "><button class=button onclick='clickf(imgname)'><img src=./resource/love.png width = '30px' height = '24px'></button></div>";
                   index++;
                 }
               });
