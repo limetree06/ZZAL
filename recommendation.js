@@ -329,8 +329,29 @@ search = document.getElementById("search_local").value;
 image = document.getElementById("getimage");
 document.getElementById("container").innerHTML = "";
 var username = sessionStorage.getItem("username");
-
 var index = 0;
+
+function clickf(name) {
+  console.log("click?!!!!!");
+  console.log(name);
+  fetch("http://192.249.18.145:443/use", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name: name, username: username }),
+  })
+    .then((res) => {
+      if (res.status === 400) {
+        console.log("fail");
+      } else if (res.status === 200) {
+        console.log("success");
+      }
+    })
+    .catch((error) => console.log("error", error));
+}
+
 fetch("http://192.249.18.145:443/recommend", {
   method: "POST",
   headers: {
@@ -365,13 +386,16 @@ fetch("http://192.249.18.145:443/recommend", {
               res.json().then((json) => {
                 console.log(json);
                 while (index < json.length) {
+                  imgname = json[index].name.toString();
                   imgsrc =
                     "data:image/" +
                     json[index].img.contentType.toString() +
                     ";base64," +
                     json[index].img.data.toString("base64");
                   document.getElementById("container").innerHTML +=
-                    "<img width = '400px' height = '300px' src=" + imgsrc + ">";
+                    "<div class=Aligner> <img width = '400px' height = '300px' src=" +
+                    imgsrc +
+                    "><button class=button onclick='clickf(imgname)'><img src=./resource/love.png width = '40px' height = '30px'> </button></div>";
                   index++;
                 }
               });

@@ -47,8 +47,11 @@ function search_local() {
               json[index].img.contentType.toString() +
               ";base64," +
               json[index].img.data.toString("base64");
+
             document.getElementById("container").innerHTML +=
-              "<img width = '400px' height = '300px' src=" + imgsrc + ">";
+              "<div> <img width = '400px' height = '300px' src=" +
+              imgsrc +
+              "><button ><img src=./resource/love.png width = '40px' height = '30px'> </button></div>";
             index++;
           }
         });
