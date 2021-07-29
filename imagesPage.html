@@ -25,6 +25,7 @@
         action="http://192.249.18.145:443/"
         method="POST"
         enctype="multipart/form-data"
+        id="upload"
       >
         <div>
           <label for="name">Image Title</label>
@@ -54,7 +55,7 @@
           <input type="file" id="image" name="image" value="" required />
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" onClick="upload()">Submit</button>
         </div>
       </form>
     </div>

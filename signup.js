@@ -23,4 +23,8 @@ function signup() {
       }
     })
     .catch((error) => console.log("error", error));
+
+  document.getElementById("username").value = "";
+  document.getElementById("psw").value = "";
+  document.getElementById("psw-repeat").value = "";
 }

@@ -25,6 +25,8 @@ function signin() {
       }
     })
     .catch((error) => console.log("error", error));
+  document.getElementById("username").value = "";
+  document.getElementById("pass").value = "";
 }
 
 function link_click() {

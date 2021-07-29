@@ -48,13 +48,15 @@ function search_local() {
               ";base64," +
               json[index].img.data.toString("base64");
             document.getElementById("container").innerHTML +=
-              "<img src=" + imgsrc + ">";
+              "<img width = '400px' height = '300px' src=" + imgsrc + ">";
             index++;
           }
         });
       }
     })
     .catch((error) => console.log("error", error));
+
+  document.getElementById("search_local").value = "";
 }
 
 function keybroad() {
@@ -63,8 +65,12 @@ function keybroad() {
     scriptPath: "path/to/my/scripts",
     args: ["value1", "value2", "value3"],
   };
-  PythonShell.run("my_script.py", options, function (err, data) {
+  PythonShell.run("keylogger.py", options, function (err, data) {
     if (err) throw err;
     console.log(data);
   });
+}
+
+function upload() {
+  document.getElementById("upload").reset();
 }
