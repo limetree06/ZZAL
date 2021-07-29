@@ -35,5 +35,25 @@
     "query": "^0.2.0",
     "yarn": "^1.22.10"
   },
-  "description": ""
+  "description": "",
+  "build": {
+    "asar": false,
+    "appId": "Madcamp4",
+    "productName": "Madcamp4",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": "x64"
+        }
+      ],
+      "icon": "./resource/zzal2.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "installerIcon": "./resource/zzal2.ico",
+      "createDesktopShortcut": true
+    }
+  }
 }
