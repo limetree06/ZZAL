@@ -328,6 +328,8 @@ function getRecommendation(data, person) {
 search = document.getElementById("search_local").value;
 image = document.getElementById("getimage");
 document.getElementById("container").innerHTML = "";
+var username = sessionStorage.getItem("username");
+
 var index = 0;
 fetch("http://192.249.18.145:443/recommend", {
   method: "POST",
@@ -344,7 +346,7 @@ fetch("http://192.249.18.145:443/recommend", {
       console.log("success");
       res.json().then((json) => {
         console.log(json);
-        var namearray = getRecommendation(json, "손민지");
+        var namearray = getRecommendation(json, username);
         console.log(namearray);
 
         fetch("http://192.249.18.145:443/recommendsearch", {
