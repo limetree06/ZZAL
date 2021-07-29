@@ -24,3 +24,8 @@
   width: 10px;
   height: 10px;
 }
+
+.button {
+  margin-left: 70px;
+  border: 0px solid #ccc;
+}
