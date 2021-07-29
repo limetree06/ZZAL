@@ -31,6 +31,21 @@
   z-index: 100;
 }
 
-.ZZAL_logo {
-  vertical-align: middle;
+.loginbox {
+  width: 1px;
+  box-sizing: border-box;
+  border: 0px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("./resource/box.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  width: 50%;
 }
