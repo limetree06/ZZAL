@@ -325,6 +325,10 @@ function getRecommendation(data, person) {
   return new_li.slice(0, 10); //상위 10개만 출력
 }
 
+search = document.getElementById("search_local").value;
+image = document.getElementById("getimage");
+document.getElementById("container").innerHTML = "";
+var index = 0;
 fetch("http://192.249.18.145:443/recommend", {
   method: "POST",
   headers: {
@@ -340,10 +344,38 @@ fetch("http://192.249.18.145:443/recommend", {
       console.log("success");
       res.json().then((json) => {
         console.log(json);
-        document.getElementById("container").innerHTML = getRecommendation(
-          json,
-          "손민지"
-        );
+        var namearray = getRecommendation(json, "손민지");
+        console.log(namearray);
+
+        fetch("http://192.249.18.145:443/recommendsearch", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name: namearray }),
+        })
+          .then((res) => {
+            if (res.status === 400) {
+              console.log("fail");
+            } else if (res.status === 200) {
+              console.log("success");
+              res.json().then((json) => {
+                console.log(json);
+                while (index < json.length) {
+                  imgsrc =
+                    "data:image/" +
+                    json[index].img.contentType.toString() +
+                    ";base64," +
+                    json[index].img.data.toString("base64");
+                  document.getElementById("container").innerHTML +=
+                    "<img width = '400px' height = '300px' src=" + imgsrc + ">";
+                  index++;
+                }
+              });
+            }
+          })
+          .catch((error) => console.log("error", error));
       });
     }
   })
