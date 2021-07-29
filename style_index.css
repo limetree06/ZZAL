@@ -1,16 +1,26 @@
-.searchbox {
-  border: 0px solid #ccc;
-  font-size: 16px;
-  background-image: url("./resource/box.png");
-  background-size: 200px;
-  background-repeat: no-repeat;
-  padding: 15px 60px 15px 60px;
-  width: 80px;
-  height: 4px;
-  align-items: center;
-  margin-bottom: 10px;
-  cursor: pointer;
+html {
+  overflow: scroll;
+  overflow-x: hidden;
 }
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+.border {
+  border-style: solid;
+  border: 0.2em inset #000000;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.parent_search {
+  position: relative;
+}
+
 .Aligner {
   display: flex;
   align-items: center;
@@ -29,11 +39,124 @@
   align-self: flex-end;
 }
 
-.button {
+/* Container needed to position the button. Adjust the width as needed */
+.Aligner {
+  position: relative;
+}
+/* Style the button and place it in the middle of the container/image */
+.Aligner .button {
+  position: absolute;
+  top: 10%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 3px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
-  cursor: pointer;
   overflow: hidden;
   outline: none;
+}
+
+.Aligner .button:hover {
+  background-color: rgb(255, 211, 211);
+}
+
+@import "compass/css3";
+
+/***********************
+ * Essential Structure *
+ ***********************/
+.flexsearch--wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  background: transparent;
+  margin: 0;
+  position: static;
+}
+
+.flexsearch--form {
+  overflow: hidden;
+  position: relative;
+}
+
+.flexsearch--input-wrapper {
+  padding: 0 0px 0 0; /* Right padding for submit button width */
+  overflow: hidden;
+}
+
+.flexsearch--input {
+  width: 60%;
+}
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+.flexsearch {
+  padding: 0 25px 0 20px; /* Padding for other horizontal elements */
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  /*요소의 높이의 반(50%) 만큼 위로 이동*/
+  transform: translateY(-50%);
+}
+
+.flexsearch--input {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 50px;
+  padding: 0 46px 0 10px;
+  border-color: #888;
+  border-radius: 20px; /* (height/2) + border-width */
+  border-style: solid;
+  border-width: 3px;
+  margin-top: 15px;
+  color: #333;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.flexsearch--submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  margin-top: 15px; /* margin-top + border-width */
+  margin-right: 30px; /* border-width */
+  background: transparent;
+  color: #888;
+  font-family: "Helvetica", sans-serif;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.flexsearch--input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+  color: #333;
+}
+
+.flexsearch--submit:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+input:-moz-placeholder {
+  color: #888;
 }

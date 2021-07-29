@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
 
     <script src="popup.js"></script>
-
+    <link rel="stylesheet" href="style_pop.css" />
     <title>Image Uploading</title>
   </head>
 
@@ -17,37 +17,40 @@
         id="upload"
       >
         <div>
-          <label for="name">Image Title</label>
           <input
             type="text"
             id="name"
-            placeholder="Name"
+            placeholder="Image name"
             value=""
             name="name"
-            required
+            class="submitbox"
           />
         </div>
         <div>
-          <label for="desc">Image Description</label>
           <input
             type="text"
             id="desc"
-            name="desc"
-            value=""
             rows="2"
-            placeholder="Description"
-            required
+            placeholder="Hashtags"
+            value=""
+            name="desc"
+            class="submitbox"
           />
         </div>
         <div>
-          <label for="image">Upload Image</label>
-          <input type="file" id="image" name="image" value="" required />
+          <input
+            type="file"
+            id="image"
+            name="image"
+            value=""
+            class="submit"
+            required
+          />
         </div>
         <div>
           <button type="submit" onClick="upload()">Submit</button>
         </div>
       </form>
     </div>
-    <input type="button" value="닫 기" onclick="self.close();" />
   </body>
 </html>
