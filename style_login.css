@@ -32,3 +32,15 @@
   margin-left: 45px;
   border: 0px solid #ccc;
 }
+
+.cropping {
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.cropping img {
+  margin-left: 2%;
+  max-height: initial;
+  margin-top: -10%;
+  margin-bottom: 4%;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="popup.js"></script>
+
+    <title>Image Uploading</title>
+  </head>
+
+  <body>
+    <div>
+      <form
+        action="http://192.249.18.145:443/"
+        method="POST"
+        enctype="multipart/form-data"
+        id="upload"
+      >
+        <div>
+          <label for="name">Image Title</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            value=""
+            name="name"
+            required
+          />
+        </div>
+        <div>
+          <label for="desc">Image Description</label>
+          <input
+            type="text"
+            id="desc"
+            name="desc"
+            value=""
+            rows="2"
+            placeholder="Description"
+            required
+          />
+        </div>
+        <div>
+          <label for="image">Upload Image</label>
+          <input type="file" id="image" name="image" value="" required />
+        </div>
+        <div>
+          <button type="submit" onClick="upload()">Submit</button>
+        </div>
+      </form>
+    </div>
+    <input type="button" value="닫 기" onclick="self.close();" />
+  </body>
+</html>
