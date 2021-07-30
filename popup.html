@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="popup.js"></script>
     <link rel="stylesheet" href="style_pop.css" />
     <title>Image Uploading</title>
@@ -14,9 +14,9 @@
         action="http://192.249.18.145:443/"
         method="POST"
         enctype="multipart/form-data"
-        id="upload"
       >
         <div>
+          <label for="name"></label>
           <input
             type="text"
             id="name"
@@ -27,6 +27,7 @@
           />
         </div>
         <div>
+          <label for="desc"></label>
           <input
             type="text"
             id="desc"
@@ -38,14 +39,8 @@
           />
         </div>
         <div>
-          <input
-            type="file"
-            id="image"
-            name="image"
-            value=""
-            class="submit"
-            required
-          />
+          <label for="image"></label>
+          <input type="file" id="image" name="image" value="" required />
         </div>
         <div>
           <button type="submit" onClick="upload()">Submit</button>
